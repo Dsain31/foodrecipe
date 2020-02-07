@@ -37,7 +37,16 @@ This project was generated with
 
 
 # Screenshots:
-   
+## login
+![](src/assets/login.jpeg)
+## resgister
+![](src/assets/register.jpeg)
+## home
+![](src/assets/home.jpeg)
+## my account
+![](src/assets/my%20account.jpeg)
+## search
+![](src/assets/search.jpeg)
 
 
 # Development server
@@ -46,6 +55,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## To run nodejs server 
 go to './backend' directory and run on nodejs server
+       
        nodemon server.js
 
 
