@@ -11,9 +11,8 @@
       cursor: pointer;
     }
     .imageDiv{
-      max-width: 960px;
-      margin: 1%;
-      width: 31%;
+      max-width: 100%;
+      margin: 2%;
       display: inline-block;
     }
   }
