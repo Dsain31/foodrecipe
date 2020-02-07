@@ -1,0 +1,20 @@
+@media only screen and (max-width: 500px) {
+    .input-full-width {
+        width: 100%;
+    }
+    .suggest{
+        width: 100%;
+        cursor: pointer;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .input-full-width{
+        width: 50%;
+    }
+    .suggest{
+        width: 50%;
+        margin: auto;
+        cursor: pointer;
+    }
+  }

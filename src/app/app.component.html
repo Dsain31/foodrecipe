@@ -1,0 +1,29 @@
+<mat-toolbar color="primary" class="responsive w3-card-4">
+    <span style="margin: 2px;">FoodRecipe</span>
+    <div class="w3-margin">
+      <span style="color: yellow">{{ username}}</span>
+    </div>
+    <div>
+      <button mat-raised-button color="accent" class="side-btn w3-tiny"
+      routerLink='home' routerLinkActive='active'
+      *ngIf='!afterLogin'>Home</button>
+
+      <button mat-raised-button color="accent" *ngIf='!afterLogin' class="side-btn w3-tiny"
+      routerLink='myaccount' routerLinkActive='active'>MyAccount</button>
+
+      <button mat-raised-button color="accent" class="side-btn w3-tiny"
+      routerLink='login' routerLinkActive='active' *ngIf='afterLogin'>Login</button>
+      
+      <button mat-raised-button color="accent" class="side-btn w3-tiny"
+      routerLink='register' routerLinkActive='active'
+      *ngIf='afterLogin'>Register</button >
+      
+      <button mat-raised-button color="accent" class="side-btn w3-tiny"
+      routerLink='search' routerLinkActive='active' 
+      *ngIf='!afterLogin'>Search</button >
+
+      <button mat-raised-button color="accent" class="side-btn w3-tiny"
+        *ngIf='!afterLogin' (click)="logout()">Logout</button>
+    </div>
+</mat-toolbar>
+<router-outlet></router-outlet>

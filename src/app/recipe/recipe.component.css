@@ -1,0 +1,45 @@
+@media only screen and (max-width: 500px) {
+    .recipeImage{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .recipeImage{
+      max-width: 100%;
+      height: auto;
+      cursor: pointer;
+    }
+    .imageDiv{
+      max-width: 960px;
+      margin: auto;
+      height: 100%;
+      width: 41%;
+    }
+  }
+
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    /* font-size: 100px; */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    opacity: 10;
+  }
+
+  .update-recipe{
+    width: 100%!important;
+    min-width: unset !important;
+  }
+
+  textarea{
+    width: 100%;
+    height: auto;
+  }
+ 

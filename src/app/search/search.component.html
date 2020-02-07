@@ -1,0 +1,25 @@
+<div class="w3-row">
+    <div class="w3-container w3-center">
+
+        <mat-form-field appearance='outline' class='input-full-width'>
+            <mat-icon matPrefix>search</mat-icon>
+            <mat-label>Search</mat-label>
+            <input type="text" matInput name='search' [(ngModel)]="search" [value]="search"
+            placeholder="Search name and ingrediants...(example: cup, baati)" (keyup)='searchRecipe(search)' >
+            <button mat-button style="cursor: pointer;" *ngIf="clearBtn"
+               matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+            <mat-icon>close</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <div *ngIf="showSuggest">
+            <div class="w3-container w3-card suggest" 
+            *ngFor='let s of suggestion'
+            (click)="showRecipe(s.recipeId)">
+              <p class="w3-khaki">title: {{s.title}} </p>
+              <p>category: {{s.category}} </p>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="w3-row">
+  <div class="w3-container w3-third" style="position: sticky;">
+    <form class="w3-card w3-padding">
+      <h3>Upload Your Recipe</h3>
+      
+      <div class="w3-row">
+        <div class="w3-container w3-third">
+          <div class="upload-btn-wrapper">
+            <img [src]="photo" alt="click here to photo"
+          class="photo w3-card-4" width="200" height="200" >
+            <input type="file" name='photo'
+             (change)='addPhoto($event)'>
+          </div>
+        </div>
+        
+        <div class="w3-container w3-twothird">
+          <mat-form-field>
+            <input type="text" name='title' [(ngModel)]="title"
+            placeholder="Title..." matInput>
+          </mat-form-field>
+          <mat-form-field>
+            <input type="text" name='category' [(ngModel)]="category"
+            placeholder="Category..." matInput>
+          </mat-form-field>
+          <div>
+            <mat-form-field *ngFor='let ing of ingreds; let i = index'>
+              <textarea matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+               cdkAutosizeMinRows="1" cdkAutosizeMaxRows="5" name='ingrediants_{{i}}'
+               [(ngModel)]="ing.ingrediants" placeholder="Ingrediants..." 
+                ></textarea>
+              <button mat-button *ngIf="showCancel" style="cursor: pointer;"
+               matSuffix mat-icon-button aria-label="Clear" (click)="cancelInput()">
+                <mat-icon>close</mat-icon>
+              </button>
+            </mat-form-field>
+            <span class="w3-btn w3-tiny w3-right" (click)="addInput()">Next Step</span>
+          </div>
+        </div>
+      </div>
+      <div class="w3-container w3-margin">
+        <button type="submit" mat-raised-button class="upload-recipe"
+        color="accent" (click)="uploadRecipe()">Upload Recipe</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="w3-container w3-twothird w3-border">
+    <h2>My Recipes</h2>
+    <div class="imageDiv w3-card" *ngFor="let recipe of myRecipe">
+      <mat-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon style="font-size: 35px;">restaurant</mat-icon>
+          <h4 mat-line>{{recipe.title}}</h4>
+          <p mat-line> {{recipe.category}} </p>
+        </mat-list-item>
+      </mat-list>
+      <img [src]="recipe.image" class='recipeImage' height="150" width="300"
+      (click)="showRecipe(recipe.recipeId)" style="cursor: pointer;" >
+    </div>
+  </div>
+</div>

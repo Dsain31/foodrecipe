@@ -1,0 +1,27 @@
+<div class="w3-container w3-center logIN">
+  <div class="w3-card-4" style="width:fit-content; margin: auto;">
+    <header class="w3-container">
+      <h3>Login</h3>
+    </header>
+    <div class="w3-container w3-padding">
+      <form [formGroup]='userdata' (ngSubmit)=login()>
+          <mat-form-field appearance='outline' class='input-full-width'>
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-label>Email</mat-label>
+            <input type="email" matInput name='email'
+             formControlName='email' placeholder="Email..." [errorStateMatcher]='matcher' >
+            <mat-error *ngIf="email.invalid" > {{getEmailError()}} </mat-error>
+          </mat-form-field>
+          <mat-form-field appearance='outline' class='input-full-width'>
+            <mat-icon matPrefix>lock</mat-icon>
+            <mat-label>Password</mat-label>
+            <input type="password" matInput name='pswd'
+             formControlName='pswd' placeholder="Password..." [errorStateMatcher]='matcher' >
+            <mat-error *ngIf="pswd.invalid" > {{getPswdError()}} </mat-error>
+          </mat-form-field>
+          <button mat-raised-button type='submit' class="w3-section"
+          [disabled]='userdata.invalid' color="accent">Login</button>
+      </form>
+    </div>
+  </div>
+</div>

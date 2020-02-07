@@ -1,0 +1,19 @@
+@media only screen and (max-width: 500px) {
+    .recipeImage{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .recipeImage{
+      max-width: 100%;
+      cursor: pointer;
+    }
+    .imageDiv{
+      max-width: 960px;
+      margin: 1%;
+      width: 31%;
+      display: inline-block;
+    }
+  }
