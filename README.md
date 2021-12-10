@@ -67,4 +67,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 # test
-![](https://github.com/Dsain31/foodrecipe/blob/master/src/assets/home.jpeg?raw=true)
+![](src/assets/home.jpeg)
